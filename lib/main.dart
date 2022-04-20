@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'utils/l10n.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Builder(builder: (context) {
+        return MyHomePage(title: L10n.of(context).title);
+      }),
+      localizationsDelegates: L10n.localizationsDelegates,
+      supportedLocales: L10n.supportedLocales,
     );
   }
 }
@@ -47,9 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+            Text(L10n.of(context).message),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
