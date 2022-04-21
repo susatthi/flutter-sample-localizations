@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(L10n.of(context).message),
+            Text(L10n.of(context).message(_counter, '回')),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,

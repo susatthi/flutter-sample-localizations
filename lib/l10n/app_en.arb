@@ -1,5 +1,18 @@
 {
   "@@locale": "en",
   "title": "Flutter Sample Localizations",
-  "message": "You have pushed the button this many times:"
+  "@title": {
+    "description": "This is Comments."
+  },
+  "message": "You have pushed the button this many times: {count} {suffix}",
+  "@message": {
+    "description": "引数を与えることは出来るけど名前付き引数になりません。",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "compact"
+      },
+      "suffix" : {}
+    }
+  }
 }

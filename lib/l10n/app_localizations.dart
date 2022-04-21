@@ -94,17 +94,17 @@ abstract class AppLocalizations {
     Locale('ja')
   ];
 
-  /// No description provided for @title.
+  /// This is Comments.
   ///
   /// In en, this message translates to:
   /// **'Flutter Sample Localizations'**
   String get title;
 
-  /// No description provided for @message.
+  /// 引数を与えることは出来るけど名前付き引数になりません。
   ///
   /// In en, this message translates to:
-  /// **'You have pushed the button this many times:'**
-  String get message;
+  /// **'You have pushed the button this many times: {count} {suffix}'**
+  String message(int count, Object suffix);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
